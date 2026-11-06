@@ -157,7 +157,7 @@ namespace UI
         {
             // Configuración de columnas (Anchos mejorados) 
             dgvDatos.Columns[0].Visible = false;
-            dgvDatos.Columns[1].Width = 180; 
+            dgvDatos.Columns[1].Width = 180;
             dgvDatos.Columns[2].Width = 180;
             dgvDatos.Columns[5].Width = 200;
             dgvDatos.Columns[6].Width = 200;
@@ -166,13 +166,13 @@ namespace UI
             dgvDatos.BackgroundColor = Color.White;
             dgvDatos.BorderStyle = BorderStyle.None;
             dgvDatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvDatos.GridColor = Color.FromArgb(230, 230, 230); 
-            dgvDatos.RowHeadersVisible = false; 
-            dgvDatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
+            dgvDatos.GridColor = Color.FromArgb(230, 230, 230);
+            dgvDatos.RowHeadersVisible = false;
+            dgvDatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvDatos.MultiSelect = false;
 
             // Estilo de los Encabezados (Headers) 
-            dgvDatos.EnableHeadersVisualStyles = false; 
+            dgvDatos.EnableHeadersVisualStyles = false;
             dgvDatos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvDatos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 66, 91);
             dgvDatos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -183,13 +183,13 @@ namespace UI
             dgvDatos.DefaultCellStyle.BackColor = Color.White;
             dgvDatos.DefaultCellStyle.ForeColor = Color.FromArgb(64, 64, 64);
             dgvDatos.DefaultCellStyle.Font = new Font("Segoe UI", 9.5f, FontStyle.Regular);
-            dgvDatos.RowTemplate.Height = 30; 
+            dgvDatos.RowTemplate.Height = 30;
 
             // Filas Alternas (Tu línea original mejorada) 
-            dgvDatos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250); 
+            dgvDatos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250);
 
             // Estilo de Fila Seleccionada 
-            dgvDatos.DefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 220, 240); 
+            dgvDatos.DefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 220, 240);
             dgvDatos.DefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
@@ -263,6 +263,11 @@ namespace UI
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
             await CargarAsync();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

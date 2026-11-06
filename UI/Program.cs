@@ -18,17 +18,21 @@ namespace UI
             //FLUJO UI -> BOL -> DAL (Entidad) -> API REST -> BD
             var http = new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:7281/"),
+                BaseAddress = new Uri("https://localhost:7292/"),
                 Timeout = TimeSpan.FromSeconds(15)
             };
 
-            var dal = new ClienteDal(http);
-            var bol = new ClienteBol(dal);
+            // Clientes
+            var clienteDal = new ClienteDal(http);
+            var clienteBol = new ClienteBol(clienteDal);
 
+            // Proveedores
+            var proveedorDal = new ProveedorDal(http);
+            var proveedorBol = new ProveedorBol(proveedorDal);
 
-            Application.Run(new frmCliente(bol));
+            // Iniciar menú principal
+            Application.Run(new FrmMain(clienteBol, proveedorBol));
 
-            
 
         }
     }

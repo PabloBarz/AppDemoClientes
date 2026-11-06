@@ -47,25 +47,26 @@
             btnNuevo = new Button();
             btnEliminar = new Button();
             btnBuscar = new Button();
+            btnVolver = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             SuspendLayout();
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(141, 50);
+            txtBuscar.Location = new Point(140, 81);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(314, 23);
+            txtBuscar.Size = new Size(558, 23);
             txtBuscar.TabIndex = 1;
             txtBuscar.KeyDown += txtBuscar_KeyDown;
             // 
             // lbBuscar
             // 
             lbBuscar.AutoSize = true;
-            lbBuscar.Location = new Point(54, 53);
+            lbBuscar.Location = new Point(54, 84);
             lbBuscar.Name = "lbBuscar";
-            lbBuscar.Size = new Size(45, 15);
+            lbBuscar.Size = new Size(59, 15);
             lbBuscar.TabIndex = 0;
-            lbBuscar.Text = "Buscar:";
+            lbBuscar.Text = "Buscador:";
             // 
             // dgvDatos
             // 
@@ -87,12 +88,15 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(160, 611);
+            btnGuardar.BackColor = Color.LimeGreen;
+            btnGuardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnGuardar.ForeColor = SystemColors.Control;
+            btnGuardar.Location = new Point(176, 611);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.Size = new Size(95, 36);
             btnGuardar.TabIndex = 16;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // label1
@@ -199,26 +203,32 @@
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(59, 611);
+            btnNuevo.BackColor = Color.DodgerBlue;
+            btnNuevo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnNuevo.ForeColor = SystemColors.Control;
+            btnNuevo.Location = new Point(54, 611);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(75, 23);
+            btnNuevo.Size = new Size(95, 36);
             btnNuevo.TabIndex = 19;
             btnNuevo.Text = "Nuevo";
-            btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(277, 611);
+            btnEliminar.BackColor = Color.Red;
+            btnEliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnEliminar.ForeColor = SystemColors.Control;
+            btnEliminar.Location = new Point(296, 611);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.Size = new Size(95, 36);
             btnEliminar.TabIndex = 20;
             btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(490, 53);
+            btnBuscar.Location = new Point(740, 80);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 2;
@@ -226,11 +236,25 @@
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // btnVolver
+            // 
+            btnVolver.BackColor = Color.SandyBrown;
+            btnVolver.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnVolver.ForeColor = SystemColors.Control;
+            btnVolver.Location = new Point(12, 12);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(124, 39);
+            btnVolver.TabIndex = 21;
+            btnVolver.Text = "Regresar";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 670);
+            Controls.Add(btnVolver);
             Controls.Add(btnEliminar);
             Controls.Add(btnNuevo);
             Controls.Add(txtDireccion);
@@ -280,5 +304,6 @@
         private Button btnNuevo;
         private Button btnEliminar;
         private Button btnBuscar;
+        private Button btnVolver;
     }
 }
